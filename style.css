@@ -1,0 +1,109 @@
+body {
+  background-color: #cdeaf1;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #0b1833;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  padding: 25px;
+  color: white;
+}
+
+.wiz-text {
+  color: white;
+  text-shadow: 2px 2px 0px black;
+}
+
+.shop-logo {
+  width: 75px;
+}
+
+.hero-img {
+  background-image: url(https://codeworksacademy.com/wizbangs-wordly-wonders/assets/img/hero-image.jpg);
+  min-height: 50vh;
+  background-position: center;
+  background-size: cover;
+  padding: 1.5em;
+
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.about-us-card {
+  background-color: rgba(233, 176, 101, 0.652);
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.wizbang {
+  width: 30%;
+  transform: scale(-1, 1);
+  filter: drop-shadow(5px 5px 20px rgb(255, 252, 224));
+  transition: all .5s cubic-bezier(.76, .9, .53, 1.53);
+}
+
+.wizbang:hover {
+  transform: scale(-1.5, 1.5) rotate(10deg);
+}
+
+.w-75 {
+  width: 50%;
+}
+
+.shop {
+  padding: 1.5em;
+  justify-content: space-evenly;
+}
+
+.item-card {
+  background-color: wheat;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 20%;
+  padding: .75em;
+  margin-bottom: 1.5em;
+  transition: all .2s ease;
+}
+
+.item-card:not(.out-of):hover {
+  transform: translate(0, -8px);
+  box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.item-card>h3 {
+  text-align: center;
+  padding: .25em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.373);
+}
+
+.item-card>img {
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.out-of {
+  filter: grayscale(1);
+}
+
+footer {
+  background-color: #0b1833;
+  color: white;
+  padding: .5em;
+  text-align: center;
+}
