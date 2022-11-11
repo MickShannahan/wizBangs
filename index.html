@@ -7,21 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WWW</title>
   <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
-  <header class="d-flex">
-    <img class="shop-logo" src="assets/img/shop-logo.png" alt="">
-    <h4 class="title"> Wizbangs Worldly Wonder</h4>
+  <header class="d-flex justify-content-between">
+    <div class="d-flex">
+      <img class="shop-logo" src="assets/img/shop-logo.png" alt="">
+      <h4 class="title"> Wizbangs Worldly Wonders</h4>
+    </div>
+    <div>
+
+      <h2 class="p-2 text-light"><span id="cart-count">0</span> <button class="btn btn-primary" type="button"
+          data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvasExample">
+          🛒
+        </button></h2>
+    </div>
   </header>
 
-  <main>
-    <section class="hero-img d-flex">
-      <div class="wizbang">
+  <main class="container-fluid">
+    <section class="hero-img row justify-content-center">
+      <div class="wizbang col-4">
         <img class="img-fluid" src="assets/img/wizbang.png" alt="">
       </div>
 
-      <div class="w-75">
+      <div class=" col-6">
         <div class="about-us-card">
           <h2 class="wiz-text">Wizbang the Wonderful</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tempora. Numquam perferendis, porro quas
@@ -35,55 +47,72 @@
       </div>
     </section>
 
-    <section class="shop d-flex">
+    <section class="shop row gap-1">
 
-      <div class="item-card">
+      <div class="item-card col-3" onclick="addItemToCart('boots')">
         <img class="img-fluid" src="assets/img/boots.png" alt="">
         <h3>Cozy Boots</h3>
         <p>These boots were made for monster slaying, and that's just what they'll do.</p>
       </div>
-      <div class="item-card">
+      <div class="item-card col-3" onclick="addItemToCart('bow')">
         <img class="img-fluid" src="assets/img/bow.png" alt="">
         <h3>Swift Bow</h3>
         <p>These boots were made for monster slaying, and that's just what they'll do.</p>
       </div>
-      <div class="item-card">
+      <div class="item-card col-3" onclick="addItemToCart('razor')">
         <img class="img-fluid" src="assets/img/dagger.png" alt="">
         <h3>Merunes Razor</h3>
         <p>These boots were made for monster slaying, and that's just what they'll do.</p>
       </div>
-      <div class="item-card">
+      <div class="item-card col-3" onclick="addItemToCart('helm')">
         <img class="img-fluid" src="assets/img/helm.png" alt="">
         <h3>Just a Helm</h3>
         <p>That's it</p>
       </div>
-      <div class="item-card">
+      <div class="item-card col-3" onclick="addItemToCart('beans')">
         <img class="img-fluid" src="assets/img/ration.png" alt="">
         <h3>Magic Beans</h3>
         <p>These boots were made for monster slaying, and that's just what they'll do.</p>
       </div>
-      <div class="item-card">
+      <div class="item-card col-3" onclick="addItemToCart('ring')">
         <img class="img-fluid" src="assets/img/ring.png" alt="">
         <h3>Not that ring</h3>
         <p>These boots were made for monster slaying, and that's just what they'll do.</p>
       </div>
-      <div class="item-card">
+      <div class="item-card col-3" onclick="addItemToCart('rope')">
         <img class="img-fluid" src="assets/img/rope.png" alt="">
         <h3>Silk Rope</h3>
         <p>These boots were made for monster slaying, and that's just what they'll do.</p>
       </div>
-      <div class="item-card out-of">
+      <div class="item-card col-3 out-of" onclick="addItemToCart('bag')">
         <img class="img-fluid" src="assets/img/bag.png" alt="">
-        <h3>Cozy Boots</h3>
+        <h3>Magic Bag</h3>
         <p>These boots were made for monster slaying, and that's just what they'll do.</p>
       </div>
 
     </section>
+
   </main>
+
+  <!-- NOTE offcanvas from bootstrap -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLabel">Cart - <span id="cart-total"></spanid>
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div id="cart-items" class="offcanvas-body">
+      <!-- spot to change the text -->
+    </div>
+  </div>
 
   <footer>Made with ☄️🧙‍♂️</footer>
 
-
+  <script src="app.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
 </body>
 

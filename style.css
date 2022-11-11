@@ -17,6 +17,11 @@ header {
   flex-wrap: wrap;
 }
 
+.justify-content-between {
+  justify-content: space-between;
+}
+
+
 .title {
   margin: 0;
   padding: 25px;
